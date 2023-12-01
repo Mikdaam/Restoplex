@@ -9,3 +9,5 @@ sealed interface OrderableDescription {
   record ItemDescription(long id, String name, boolean available, double price) implements OrderableDescription {}
   record MealDescription(long id, String name, boolean available, double price) implements OrderableDescription {}
 }
+
+record Orderable(OrderableDescription description) {}
