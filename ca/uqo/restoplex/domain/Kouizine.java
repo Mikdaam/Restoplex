@@ -1,4 +1,4 @@
 package ca.uqo.restoplex.domain;
 
-public class Kouizine {
+final class Kouizine {
 }
