@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ada0787c-7bbf-46e7-b27c-5cf69ee6b00f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,6 +13,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
   <component name="ProjectId" id="2YrwMeJedp1qMkiwqAxym0asmEI" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
