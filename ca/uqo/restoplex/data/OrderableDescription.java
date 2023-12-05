@@ -1,6 +1,6 @@
 package ca.uqo.restoplex.data;
 
-sealed interface OrderableDescription {
+public sealed interface OrderableDescription {
   final class OrderableDescriptionData { // TODO A REMPLACER PAR LE DTO OrderableDescriptionData
     private final long id;
     private final String name;

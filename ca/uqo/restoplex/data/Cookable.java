@@ -1,3 +1,3 @@
 package ca.uqo.restoplex.data;
 
-public record Cookable(short quantity, OrderableDescription.ItemDescription description, Table tableToDeliver) {}
+public record Cookable(short quantity, OrderableDescription.ItemDescription description, Order associatedOrder) {}
