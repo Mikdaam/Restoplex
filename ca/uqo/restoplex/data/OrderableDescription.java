@@ -1,11 +1,33 @@
 package ca.uqo.restoplex.data;
 
-sealed interface OrderableDescription {
-  long id();
-  String name();
-  boolean available();
-  double price();
+public sealed interface OrderableDescription {
+  final class OrderableDescriptionData { // TODO A REMPLACER PAR LE DTO OrderableDescriptionData
+    private final long id;
+    private final String name;
+    private final double price;
+    private boolean available;
 
-  record ItemDescription(long id, String name, boolean available, double price) implements OrderableDescription {}
-  record MealDescription(long id, String name, boolean available, double price) implements OrderableDescription {}
+    private OrderableDescriptionData(long id, String name, double price) {
+      this.id = id;
+      this.name = name;
+      this.price = price;
+    }
+
+    void hide() {
+      available = false;
+    }
+    void reveal() {
+      available = true;
+    }
+  }
+
+  enum ITEM_CATEGORY {STARTER, DISH, DESSERT}
+
+  OrderableDescriptionData data();
+
+  record ItemDescription(OrderableDescriptionData data, ITEM_CATEGORY category, String composition) implements OrderableDescription {} // TODO illustration
+
+  record MealDescription(OrderableDescriptionData data, ItemDescription...items) implements OrderableDescription {}
 }
+
+record Orderable(OrderableDescription description) {}
