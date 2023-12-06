@@ -1,5 +1,9 @@
 package ca.uqo.restoplex.data;
 
-enum TABLE_STATE {FREE, ORDERING, OCCUPIED}
+public record Table(long id, short capacity, TABLE_STATE state) {
+  public enum TABLE_STATE {FREE, ORDERING, OCCUPIED}
 
-record Table(long id, short capacity, TABLE_STATE state) {}
+  public Table(long id, short capacity) {
+    this(id, capacity, TABLE_STATE.FREE);
+  }
+}
