@@ -4,7 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ada0787c-7bbf-46e7-b27c-5cf69ee6b00f" name="Changes" comment="" />
+    <list default="true" id="b7ceee46-6fad-4b84-a58c-29341b130619" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/restoplex.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.fxbuild" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ca/uqo/restoplex/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ca/uqo/restoplex/data/Cookable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ca/uqo/restoplex/data/Notification.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ca/uqo/restoplex/data/Order.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ca/uqo/restoplex/data/OrderableDescription.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ca/uqo/restoplex/data/Table.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ca/uqo/restoplex/domain/Kouizine.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ca/uqo/restoplex/loginPage/Login.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ca/uqo/restoplex/loginPage/LoginPage.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ca/uqo/restoplex/loginPage/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ca/uqo/restoplex/loginPage/application.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ca/uqo/restoplex/presentation/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ca/uqo/restoplex/presentation/Presantation.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ca/uqo/restoplex/presentation/RestoplexGUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ca/uqo/restoplex/presentation/application.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imageLoginPage1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imageMenuProjet.jpg" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,10 +37,17 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
-  <component name="ProjectId" id="2YrwMeJedp1qMkiwqAxym0asmEI" />
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2Z9m2HwmybaHmJpGZf1K8AYnZtg" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -25,25 +56,78 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "dart.analysis.tool.window.visible": "false",
-    "show.migrate.to.gradle.popup": "false",
-    "vue.rearranger.settings.migration": "true"
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/axbel/OneDrive - Université du Québec en Outaouais/Documents/Modelisation/Projet/restoplex/src/main/resources/ca/uqo/restoplex/presentation/loginPage",
+    "settings.editor.selected.configurable": "MavenSettings"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\axbel\OneDrive - Université du Québec en Outaouais\Documents\Modelisation\Projet\restoplex\src\main\resources\ca\uqo\restoplex\presentation\loginPage" />
+      <recent name="C:\Users\axbel\OneDrive - Université du Québec en Outaouais\Documents\Modelisation\Projet\restoplex\src\main\resources\ca\uqo\restoplex\presentation" />
+      <recent name="C:\Users\axbel\OneDrive - Université du Québec en Outaouais\Documents\Modelisation\Projet\restoplex\src\main\resources\ca\uqo\restoplex" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.testfx.HelloApplication" />
+      <module name="testFX" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.testfx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-21" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="ca.uqo.restoplex.Main" />
+      <module name="restoplex" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ca.uqo.restoplex.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ca.uqo.restoplex.presentation.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ca.uqo.restoplex.presentation.Main" />
+      <module name="restoplex" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ca.uqo.restoplex.presentation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.ca.uqo.restoplex.presentation.Main" />
+        <item itemvalue="Application.HelloApplication" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ada0787c-7bbf-46e7-b27c-5cf69ee6b00f" name="Changes" comment="" />
-      <created>1701296963142</created>
+      <changelist id="b7ceee46-6fad-4b84-a58c-29341b130619" name="Changes" comment="" />
+      <created>1701842461310</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1701296963142</updated>
-      <workItem from="1701296965843" duration="98000" />
+      <updated>1701842461310</updated>
     </task>
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
 </project>
