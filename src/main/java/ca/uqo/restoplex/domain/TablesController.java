@@ -9,6 +9,10 @@ public final class TablesController {
   TablesController() {}
 
   private void updateTableState(long tableId, Table.TABLE_STATE newState) {
+    if(tableId <= 0) {
+      throw new IllegalArgumentException();
+    }
+
     tables.computeIfPresent(tableId,
             (__, oldTable) -> new Table(tableId, oldTable.capacity(), newState)
     );

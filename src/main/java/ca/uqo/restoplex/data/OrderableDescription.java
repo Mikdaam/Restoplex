@@ -29,5 +29,3 @@ public sealed interface OrderableDescription {
 
   record MealDescription(OrderableDescriptionData data, ItemDescription...items) implements OrderableDescription {}
 }
-
-record Orderable(OrderableDescription description) {}
