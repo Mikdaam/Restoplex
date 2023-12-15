@@ -14,7 +14,7 @@ public final class TablesController {
     }
 
     tables.computeIfPresent(tableId,
-            (__, oldTable) -> new Table(tableId, oldTable.capacity(), newState)
+            (__, oldTable) -> new Table(tableId, oldTable.capacity(), newState) // TODO update table state dans DB ?????
     );
   }
 

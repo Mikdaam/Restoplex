@@ -7,7 +7,7 @@ public sealed interface OrderableDescription {
     private final double price;
     private boolean available;
 
-    private OrderableDescriptionData(long id, String name, double price) {
+    public OrderableDescriptionData(long id, String name, double price) {
       this.id = id;
       this.name = name;
       this.price = price;
@@ -18,6 +18,11 @@ public sealed interface OrderableDescription {
     }
     void reveal() {
       available = true;
+    }
+
+    @Override
+    public String toString() {
+      return name;
     }
   }
 
