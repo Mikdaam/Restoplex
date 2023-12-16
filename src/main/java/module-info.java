@@ -1,4 +1,4 @@
-module ca.uqo.restoplex {
+module src.main.java.ca.uqo.restoplex {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.graphics;

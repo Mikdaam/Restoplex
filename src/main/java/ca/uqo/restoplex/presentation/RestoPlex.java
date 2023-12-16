@@ -1,5 +1,7 @@
-package ca.uqo.restoplex.presentation;
+package src.main.java.ca.uqo.restoplex.presentation;
 	
+import java.util.Objects;
+
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.stage.Stage;
@@ -15,15 +17,15 @@ public class RestoPlex extends Application {
 	public void start(Stage primaryStage) {
 		
 		try {
-			Parent root1 = FXMLLoader.load(getClass().getResource("Tablee.fxml"));
+			Parent root1 = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/src/main/resources/ca/uqo/restoplex/presentation/Tablee.fxml")));
 			Scene scene1 = new Scene(root1);
-			Parent root2 = FXMLLoader.load(getClass().getResource("MenuCommande.fxml"));
+			Parent root2 = FXMLLoader.load(getClass().getResource("/src/main/resources/ca/uqo/restoplex/presentation/MenuCommande.fxml"));
 			Scene scene2 = new Scene(root2);
 
-			scene2.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			scene2.getStylesheets().add(getClass().getResource("/src/main/resources/ca/uqo/restoplex/presentation/application.css").toExternalForm());
 			primaryStage.setScene(scene2);
 
-			scene1.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			scene1.getStylesheets().add(getClass().getResource("/src/main/resources/ca/uqo/restoplex/presentation/application.css").toExternalForm());
 			primaryStage.setScene(scene1);
 			
 			primaryStage.show();

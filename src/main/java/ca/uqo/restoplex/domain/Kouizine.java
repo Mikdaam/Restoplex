@@ -1,7 +1,7 @@
-package ca.uqo.restoplex.domain;
-import ca.uqo.restoplex.data.Cookable;
-import ca.uqo.restoplex.data.Order;
-import ca.uqo.restoplex.data.OrderableDescription;
+package src.main.java.ca.uqo.restoplex.domain;
+import src.main.java.ca.uqo.restoplex.data.Cookable;
+import src.main.java.ca.uqo.restoplex.data.Order;
+import src.main.java.ca.uqo.restoplex.data.OrderableDescription;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.ListView;
@@ -34,6 +34,8 @@ public final class Kouizine {
   void submitNewOrder(Order order) {
     Objects.requireNonNull(order);
     order.orderLinesToCook().forEach(this::associateOrderLineWithNewCookables);
+    System.out.println("Kouizine :");
+    System.out.println(toCook);
   }
 
   public void test(Cookable cookable) { // TODO A VIRER

@@ -1,4 +1,4 @@
-package ca.uqo.restoplex.presentation.loginPage;
+package src.main.java.ca.uqo.restoplex.presentation;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;

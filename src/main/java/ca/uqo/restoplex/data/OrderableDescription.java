@@ -1,4 +1,6 @@
-package ca.uqo.restoplex.data;
+package src.main.java.ca.uqo.restoplex.data;
+
+import java.util.List;
 
 public sealed interface OrderableDescription {
   final class OrderableDescriptionData { // TODO A REMPLACER PAR LE DTO OrderableDescriptionData
@@ -13,10 +15,11 @@ public sealed interface OrderableDescription {
       this.price = price;
     }
 
-    void hide() {
+    public void hide() {
       available = false;
     }
-    void reveal() {
+    
+    public void reveal() {
       available = true;
     }
 
@@ -26,11 +29,11 @@ public sealed interface OrderableDescription {
     }
   }
 
-  enum ITEM_CATEGORY {STARTER, DISH, DESSERT}
+  enum ITEM_CATEGORY {STARTER, DISH, DESSERT, DRINK}
 
   OrderableDescriptionData data();
 
   record ItemDescription(OrderableDescriptionData data, ITEM_CATEGORY category, String composition) implements OrderableDescription {} // TODO illustration
 
-  record MealDescription(OrderableDescriptionData data, ItemDescription...items) implements OrderableDescription {}
+  record MealDescription(OrderableDescriptionData data, List<ItemDescription> items) implements OrderableDescription {}
 }

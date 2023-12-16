@@ -1,5 +1,5 @@
-package ca.uqo.restoplex;
-import ca.uqo.restoplex.presentation.TableOverviewGUI;
+package src.main.java.ca.uqo.restoplex;
+import src.main.java.ca.uqo.restoplex.presentation.TableOverviewGUI;
 import javafx.application.Application;
 import javafx.stage.Stage;
 

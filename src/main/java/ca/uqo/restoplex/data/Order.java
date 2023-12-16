@@ -1,4 +1,4 @@
-package ca.uqo.restoplex.data;
+package src.main.java.ca.uqo.restoplex.data;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -72,7 +72,7 @@ public final class Order {
   private final ArrayList<OrderLine> orderContent = new ArrayList<>();
   private final Table table;
 
-  private Order(Table table) {
+  public Order(Table table) {
     this.table = table;
   }
 

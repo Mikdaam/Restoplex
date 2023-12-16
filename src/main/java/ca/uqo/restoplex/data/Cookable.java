@@ -1,4 +1,4 @@
-package ca.uqo.restoplex.data;
+package src.main.java.ca.uqo.restoplex.data;
 
 public record Cookable(
         short quantity,
