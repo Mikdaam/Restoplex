@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.uqo.restoplex.presentation.ClassController">
+   <right>
+      <AnchorPane prefHeight="600.0" prefWidth="621.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="531.0" layoutY="1.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: red;" text="Supprimer" textFill="#f8f6f6">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="plat1Button" layoutX="60.0" layoutY="73.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="134.0" style="-fx-background-radius: 15; -fx-background-color: #f59106;" textFill="#8a3d3d" />
+            <Text layoutX="97.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20;" text="Italien:" wrappingWidth="70.13671875">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Button fx:id="plat2Button" layoutX="270.0" layoutY="73.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="134.0" style="-fx-background-radius: 15; -fx-background-color: #cd5d2a;" textFill="#cd5d2a" />
+            <Button fx:id="plat3Button" layoutX="465.0" layoutY="73.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="134.0" style="-fx-background-radius: 15; -fx-background-color: #7c2d31;" textFill="#7c2d31" />
+            <Button fx:id="plat4Button" layoutX="60.0" layoutY="260.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="134.0" style="-fx-background-radius: 15; -fx-background-color: #026b56;" textFill="#b5b8bc" />
+            <Text layoutX="289.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20;" text="Kid's Meal:" wrappingWidth="96.13671875">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="473.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20;" text="Familial Meal" wrappingWidth="128.13671875">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="106.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20;" text="Pizza" wrappingWidth="53.13671875">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Button fx:id="plat5Button" layoutX="270.0" layoutY="260.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="134.0" style="-fx-background-radius: 15; -fx-background-color: #5b0549;" textFill="#5b0549" />
+            <Button fx:id="plat6Button" layoutX="465.0" layoutY="260.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="134.0" style="-fx-background-radius: 15; -fx-background-color: #9e6262;" textFill="#9e6262" />
+            <Button fx:id="plat7Button" layoutX="60.0" layoutY="430.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="134.0" style="-fx-background-radius: 15; -fx-background-color: #c97f47;" textFill="#c97f47" />
+            <Button fx:id="plat8Button" layoutX="270.0" layoutY="430.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="134.0" style="-fx-background-radius: 15; -fx-background-color: #555997;" textFill="#555997" />
+            <Button fx:id="plat9Button" layoutX="465.0" layoutY="430.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="134.0" style="-fx-background-radius: 15; -fx-background-color: #ae89a5;" textFill="#ae89a5" />
+            <Text fill="#360202" layoutX="313.0" layoutY="311.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20;" text="Burger" wrappingWidth="62.13671875">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="73.0" layoutY="480.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20;" text="Mini-Burger" wrappingWidth="108.13671875">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="295.0" layoutY="481.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20;" text="Tiramisu" wrappingWidth="83.13671875">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="105.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza" wrappingWidth="53.13671875">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="511.0" layoutY="481.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20;" text="Coke" wrappingWidth="53.13671875">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="501.0" layoutY="311.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20;" text="Poutine" wrappingWidth="72.13671875">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza" wrappingWidth="53.13671875">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza" wrappingWidth="53.13671875">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="105.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="coke" wrappingWidth="53.13671875">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="102.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tiramisu" wrappingWidth="66.13671875">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="306.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mini-Burger" wrappingWidth="81.13671875">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="306.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Coke" wrappingWidth="53.13671875">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="306.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tiramisu" wrappingWidth="67.13671875">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="511.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Poutine" wrappingWidth="53.13671875">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="510.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Coke" wrappingWidth="53.13671875">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="509.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tiramisu" wrappingWidth="68.13671875">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Button layoutX="3.0" layoutY="1.0" mnemonicParsing="false" onAction="#switchToTable" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: #d0d3d7;" text="&lt; Retour" textFill="#f8f6f6">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+   </right>
+   <left>
+      <AnchorPane prefHeight="600.0" prefWidth="275.0" style="-fx-background-color: #b5bwhite8bc;" BorderPane.alignment="CENTER">
+         <children>
+            <ButtonBar layoutX="-47.0" layoutY="220.0" prefHeight="40.0" prefWidth="200.0" />
+            <Button layoutY="568.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="81.0" style="-fx-background-color: #1a60c9;" text="Draft" textFill="#f4f4f5">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="199.0" layoutY="566.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="81.0" style="-fx-background-color: #1a60c9;" text="Save" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <AnchorPane layoutY="1.0" prefHeight="562.0" prefWidth="280.0">
+               <children>
+                  <ListView fx:id="myListView" layoutX="1.0" layoutY="72.0" prefHeight="490.0" prefWidth="278.0" />
+               </children></AnchorPane>
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>
