@@ -1,24 +1,22 @@
-package ca.uqo.restoplex.loginPage;
-	
+package ca.uqo.restoplex.presentation.loginPage;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.Parent;
 import javafx.fxml.FXMLLoader;
-//import javafx.fxml.FXML;
 
+import java.util.Objects;
 
-public class Main extends Application {
+public class LoginPageGUI extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
 			//Parent root = FXMLLoader.load(getClass().getResource("Presantation.fxml"));
-			Parent root = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
+			Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("LoginPage.fxml")));
 			//Scene scene = new Scene(root);
 			Scene scene = new Scene(root, 600,400);
 
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("application.css")).toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {
