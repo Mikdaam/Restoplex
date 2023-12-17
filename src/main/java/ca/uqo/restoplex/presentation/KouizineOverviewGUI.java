@@ -22,24 +22,13 @@ public final class KouizineOverviewGUI extends Application {
   private Cookable toCookSelectedCookable;
   private Cookable inPreparationSelectedCookable;
 
-  @Override
-  public void start(Stage stage) {
+  public Stage stage() {
     toCookListView.getSelectionModel().selectedItemProperty().addListener(
             (observableValue, oldValue, newValue) -> toCookSelectedCookable = newValue
     );
     inPreparationListView.getSelectionModel().selectedItemProperty().addListener(
             (observableValue, oldValue, newValue) -> inPreparationSelectedCookable = newValue
     );
-
-
-    var btn = new Button("Test");
-    var random = new Random();
-    btn.setOnAction(event -> {
-      var name = "" + random.nextInt();
-      var description = new OrderableDescription.ItemDescription(new OrderableDescription.OrderableDescriptionData(42L, name, 12.5F), null, null);
-      var cookable = new Cookable((short) 12, description, null);
-      kouizine.test(cookable);
-    });
 
     var acceptBtn = new Button("Accept");
     acceptBtn.setOnAction(__ -> {
@@ -59,7 +48,45 @@ public final class KouizineOverviewGUI extends Application {
     });
 
     var vbox = new VBox(5); // 5 is the spacing between elements in the VBox
-    vbox.getChildren().addAll(toCookListView, inPreparationListView, btn, acceptBtn, readyBtn);
+    vbox.getChildren().addAll(toCookListView, inPreparationListView, acceptBtn, readyBtn);
+
+    var root = new StackPane();
+    root.getChildren().add(vbox);
+    StackPane.setAlignment(vbox, Pos.CENTER);
+
+    var secondStage = new Stage();
+    secondStage.setScene(new Scene(root));
+    return secondStage;
+  }
+
+  @Override
+  public void start(Stage stage) {
+    toCookListView.getSelectionModel().selectedItemProperty().addListener(
+            (observableValue, oldValue, newValue) -> toCookSelectedCookable = newValue
+    );
+    inPreparationListView.getSelectionModel().selectedItemProperty().addListener(
+            (observableValue, oldValue, newValue) -> inPreparationSelectedCookable = newValue
+    );
+
+    var acceptBtn = new Button("Accept");
+    acceptBtn.setOnAction(__ -> {
+      if(toCookSelectedCookable == null) {
+        return;
+      }
+
+      kouizine.prepareCookable(toCookSelectedCookable);
+    });
+    var readyBtn = new Button("Ready");
+    readyBtn.setOnAction(__ -> {
+      if(inPreparationSelectedCookable == null) {
+        return;
+      }
+
+      kouizine.notifyReadyCookable(inPreparationSelectedCookable);
+    });
+
+    var vbox = new VBox(5); // 5 is the spacing between elements in the VBox
+    vbox.getChildren().addAll(toCookListView, inPreparationListView, acceptBtn, readyBtn);
 
     var root = new StackPane();
     root.getChildren().add(vbox);

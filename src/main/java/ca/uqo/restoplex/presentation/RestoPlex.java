@@ -1,17 +1,12 @@
 package ca.uqo.restoplex.presentation;
-	
 import java.util.Objects;
-
 import javafx.application.Application;
-import javafx.collections.FXCollections;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.Parent;
 import javafx.fxml.FXMLLoader;
-//import javafx.fxml.FXML;
 
-
+// TODO A VIRER
 public class RestoPlex extends Application {
 	@Override
 	public void start(Stage primaryStage) {
@@ -32,9 +27,5 @@ public class RestoPlex extends Application {
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
-	}
-	
-	public static void main(String[] args) {
-		launch(args);
 	}
 }

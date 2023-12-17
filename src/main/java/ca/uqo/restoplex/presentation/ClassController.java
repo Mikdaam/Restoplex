@@ -196,7 +196,6 @@ public class ClassController implements Initializable{
 	        if (myListView != null) myListView.setItems(ORDER_CONTROLLER.getPlatList());
 	        
 	        if(done != null) {
-	        	System.out.println("ICICICICI");
 	        	done.setOnAction(e -> ORDER_CONTROLLER.submitTokouizine(CURRENT_ORDER));
 	        }
 	        
@@ -216,15 +215,6 @@ public class ClassController implements Initializable{
 	    public void onPlatButtonClick(String nomPlat) {
 	    	ORDER_CONTROLLER.getPlatList().add(nomPlat);
 	    }
-	    
-	    /* public void nomTableDeLaCommandeEnCours() {
-	    	System.out.println("Updating label with: " + selectedTableName);
-	       if (nomTable != null) {
-	        	nomTable.setText(selectedTableName);
-	        	nomTable.requestLayout();
-	        }
-	    	
-	    }*/
 	    
 	    public static void switchToMenuCommande(ActionEvent event, Table selectedTable) throws IOException {
 			Parent root2 = FXMLLoader.load(Objects.requireNonNull(ClassController.class.getResource("MenuCommande.fxml")));
