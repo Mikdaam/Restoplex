@@ -4,7 +4,7 @@ module src.main.java.ca.uqo.restoplex {
     requires javafx.graphics;
 
 
-    opens ca.uqo.restoplex to javafx.fxml;
-    exports ca.uqo.restoplex;
-    exports ca.uqo.restoplex.presentation;
+    opens src.main.java.ca.uqo.restoplex to javafx.fxml;
+    exports src.main.java.ca.uqo.restoplex;
+    exports src.main.java.ca.uqo.restoplex.presentation;
 }

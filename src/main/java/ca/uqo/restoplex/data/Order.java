@@ -87,4 +87,8 @@ public final class Order {
   public List<OrderLine> orderLinesToCook() {
     return List.copyOf(toCookContent);
   }
+  
+  public Table getTable() {
+	   return table;
+  }
 }

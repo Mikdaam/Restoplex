@@ -24,9 +24,6 @@ public class ClassController implements Initializable{
 	private final static OrderController ORDER_CONTROLLER = Factory.getOrderControllerInstance();
 	
 	private static Order CURRENT_ORDER;
-	
-	
-
 		@FXML
 		private ListView<String> myListView;
 		@FXML
@@ -209,6 +206,11 @@ public class ClassController implements Initializable{
 						return;
 					}
 				});
+	        }
+	        
+	        if(CURRENT_ORDER != null) {
+	        	var table = CURRENT_ORDER.getTable();
+	        	nomTable.setText("Table" + table.id() + "\n" + table.capacity());	        	
 	        }
 	   }
 	    

@@ -157,7 +157,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Label layoutX="254.0" layoutY="15.0" prefHeight="37.0" prefWidth="157.0" text="table">
+            <Label fx:id="nomTable" layoutX="254.0" layoutY="3.0" prefHeight="70.0" prefWidth="219.0" text="table">
                <font>
                   <Font name="System Italic" size="22.0" />
                </font>

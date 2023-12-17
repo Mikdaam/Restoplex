@@ -65,7 +65,6 @@ public class TableOverviewGUI implements Initializable{
 	@FXML
 	private Button table24;
 	
-
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
