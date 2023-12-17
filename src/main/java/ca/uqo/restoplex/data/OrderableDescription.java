@@ -1,4 +1,4 @@
-package src.main.java.ca.uqo.restoplex.data;
+package ca.uqo.restoplex.data;
 
 import java.util.List;
 

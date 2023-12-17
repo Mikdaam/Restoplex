@@ -1,7 +1,7 @@
-package src.main.java.ca.uqo.restoplex.domain;
-import src.main.java.ca.uqo.restoplex.data.Cookable;
-import src.main.java.ca.uqo.restoplex.data.Order;
-import src.main.java.ca.uqo.restoplex.data.OrderableDescription;
+package ca.uqo.restoplex.domain;
+import ca.uqo.restoplex.data.Cookable;
+import ca.uqo.restoplex.data.Order;
+import ca.uqo.restoplex.data.OrderableDescription;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.ListView;
@@ -22,7 +22,7 @@ public final class Kouizine {
         orderLine.associateWithCookable(cookable);
         toCook.add(cookable);
       }
-      case OrderableDescription.MealDescription mealDescription -> Arrays.stream(mealDescription.items())
+      case OrderableDescription.MealDescription mealDescription -> mealDescription.items().stream()
               .map(itemDescription -> new Cookable(orderLine.quantity(), itemDescription, orderLine))
               .forEach(cookable -> {
                 orderLine.associateWithCookable(cookable);

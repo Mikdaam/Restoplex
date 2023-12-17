@@ -1,8 +1,8 @@
-package src.main.java.ca.uqo.restoplex.presentation;
-import src.main.java.ca.uqo.restoplex.data.Cookable;
-import src.main.java.ca.uqo.restoplex.data.OrderableDescription;
-import src.main.java.ca.uqo.restoplex.domain.Factory;
-import src.main.java.ca.uqo.restoplex.domain.Kouizine;
+package ca.uqo.restoplex.presentation;
+import ca.uqo.restoplex.data.Cookable;
+import ca.uqo.restoplex.data.OrderableDescription;
+import ca.uqo.restoplex.domain.Factory;
+import ca.uqo.restoplex.domain.Kouizine;
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;

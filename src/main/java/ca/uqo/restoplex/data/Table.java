@@ -1,4 +1,4 @@
-package src.main.java.ca.uqo.restoplex.data;
+package ca.uqo.restoplex.data;
 
 public record Table(long id, short capacity, TABLE_STATE state) {
   public enum TABLE_STATE {FREE, ORDERING, OCCUPIED}

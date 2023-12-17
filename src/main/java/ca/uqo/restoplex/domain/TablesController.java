@@ -1,5 +1,5 @@
-package src.main.java.ca.uqo.restoplex.domain;
-import src.main.java.ca.uqo.restoplex.data.Table;
+package ca.uqo.restoplex.domain;
+import ca.uqo.restoplex.data.Table;
 import java.util.HashMap;
 import java.util.List;
 
@@ -36,7 +36,7 @@ public final class TablesController {
     return List.copyOf(tables.values());
   }
   
-  //Création des tables
+  //Crï¿½ation des tables
   public void createTables() {
     Table table1 = new Table(1L, (short)8);
     Table table2 = new Table(2L, (short)14);
@@ -67,7 +67,7 @@ public final class TablesController {
     
     
 
-    // Ajouter les tables à la collection
+    // Ajouter les tables ï¿½ la collection
     tables.put(table1.id(), table1);
     tables.put(table2.id(), table2);
     tables.put(table3.id(), table3);

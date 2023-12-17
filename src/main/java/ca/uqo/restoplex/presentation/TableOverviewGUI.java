@@ -1,7 +1,7 @@
-package src.main.java.ca.uqo.restoplex.presentation;
+package ca.uqo.restoplex.presentation;
 import javafx.application.Application;
 import javafx.stage.Stage;
-import src.main.java.ca.uqo.restoplex.domain.Factory;
+import ca.uqo.restoplex.domain.Factory;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.Parent;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.ResourceBundle;
 import java.util.stream.IntStream;
 
-public class TableOverviewGUI implements Initializable{
+public class TableOverviewGUI implements Initializable {
 	@FXML
 	private Button table1;
 	@FXML

@@ -1,10 +1,10 @@
-package src.main.java.ca.uqo.restoplex.presentation;
+package ca.uqo.restoplex.presentation;
 import javafx.stage.Stage;
-import src.main.java.ca.uqo.restoplex.data.Order;
-import src.main.java.ca.uqo.restoplex.data.OrderableDescription;
-import src.main.java.ca.uqo.restoplex.data.Table;
-import src.main.java.ca.uqo.restoplex.domain.Factory;
-import src.main.java.ca.uqo.restoplex.domain.OrderController;
+import ca.uqo.restoplex.data.Order;
+import ca.uqo.restoplex.data.OrderableDescription;
+import ca.uqo.restoplex.data.Table;
+import ca.uqo.restoplex.domain.Factory;
+import ca.uqo.restoplex.domain.OrderController;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -18,6 +18,7 @@ import javafx.scene.Parent;
 import javafx.scene.Node;
 import java.net.URL;
 import java.util.List;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class ClassController implements Initializable{
@@ -59,7 +60,7 @@ public class ClassController implements Initializable{
 
 	   // @Override
 	    public void initialize(URL location, ResourceBundle resources) {
-	        // Configurer les gestionnaires d'événements pour chaque bouton
+	        // Configurer les gestionnaires d'ï¿½vï¿½nements pour chaque bouton
 	    	
 	    	var italianDesc = new OrderableDescription.OrderableDescriptionData(1L, "Italien", 35.20);
 	    	italianDesc.reveal();
@@ -191,7 +192,7 @@ public class ClassController implements Initializable{
 	        	});
 	        }
 
-	        // Configurer le modèle pour la ListView
+	        // Configurer le modï¿½le pour la ListView
 	        if (myListView != null) myListView.setItems(ORDER_CONTROLLER.getPlatList());
 	        
 	        if(done != null) {
@@ -226,7 +227,7 @@ public class ClassController implements Initializable{
 	    }*/
 	    
 	    public static void switchToMenuCommande(ActionEvent event, Table selectedTable) throws IOException {
-			Parent root2 = FXMLLoader.load(ClassController.class.getResource("/src/main/resources/ca/uqo/restoplex/presentation/MenuCommande.fxml"));
+			Parent root2 = FXMLLoader.load(Objects.requireNonNull(ClassController.class.getResource("MenuCommande.fxml")));
 			var stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 			var scene= new Scene(root2);
 			stage.setScene(scene);
@@ -237,7 +238,7 @@ public class ClassController implements Initializable{
 		}
 		
 		public static void switchToTable(ActionEvent event) throws IOException {
-			Parent root1 = FXMLLoader.load(ClassController.class.getResource("/src/main/resources/ca/uqo/restoplex/presentation/Tablee.fxml"));
+			Parent root1 = FXMLLoader.load(Objects.requireNonNull(ClassController.class.getResource("Tablee.fxml")));
 			var stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 			var scene = new Scene(root1);
 			stage.setScene(scene);

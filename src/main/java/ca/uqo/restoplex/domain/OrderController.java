@@ -1,8 +1,8 @@
-package src.main.java.ca.uqo.restoplex.domain;
+package ca.uqo.restoplex.domain;
 import java.util.HashMap;
 import java.util.HashSet;
-import src.main.java.ca.uqo.restoplex.data.Table;
-import src.main.java.ca.uqo.restoplex.data.Order;
+import ca.uqo.restoplex.data.Table;
+import ca.uqo.restoplex.data.Order;
 
 import java.util.Set;
 import javafx.collections.FXCollections;

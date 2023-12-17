@@ -1,4 +1,4 @@
-package src.main.java.ca.uqo.restoplex.domain;
+package ca.uqo.restoplex.domain;
 
 public final class Factory {
   private static class LazyHolder {
