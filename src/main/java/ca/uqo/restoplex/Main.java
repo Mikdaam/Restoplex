@@ -1,5 +1,6 @@
 package ca.uqo.restoplex;
-import ca.uqo.restoplex.presentation.KouizineOverviewGUI;
+
+import ca.uqo.restoplex.presentation.KitchenView;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
@@ -57,7 +58,7 @@ public class Main extends Application {
     });
 
     var kouizineBtn = new Button("Voir la Cuisine");
-    kouizineBtn.setOnAction(event -> new KouizineOverviewGUI().stage().show());
+    kouizineBtn.setOnAction(event -> new KitchenView().stage().show());
 
     var vbox = new VBox(5); // 5 is the spacing between elements in the VBox
     vbox.getChildren().addAll(tablesBtn, kouizineBtn);
