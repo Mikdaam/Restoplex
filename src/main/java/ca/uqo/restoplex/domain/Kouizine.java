@@ -1,11 +1,11 @@
 package ca.uqo.restoplex.domain;
-import ca.uqo.restoplex.data.Cookable;
-import ca.uqo.restoplex.data.Order;
-import ca.uqo.restoplex.data.OrderableDescription;
+import ca.uqo.restoplex.domain.model.Cookable;
+import ca.uqo.restoplex.domain.model.Order;
+import ca.uqo.restoplex.domain.model.OrderableDescription;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.ListView;
-import java.util.Arrays;
+
 import java.util.Objects;
 
 public final class Kouizine {

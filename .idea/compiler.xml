@@ -15,5 +15,8 @@
   <component name="JavacSettings">
     <option name="PREFER_TARGET_JDK_COMPILER" value="false" />
     <option name="ADDITIONAL_OPTIONS_STRING" value="-source 21" />
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="restoplex" options="" />
+    </option>
   </component>
 </project>

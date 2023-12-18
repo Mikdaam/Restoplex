@@ -1,8 +1,8 @@
-package ca.uqo.restoplex.presentation;
+package ca.uqo.restoplex.presentation.controller;
 import javafx.stage.Stage;
-import ca.uqo.restoplex.data.Order;
-import ca.uqo.restoplex.data.OrderableDescription;
-import ca.uqo.restoplex.data.Table;
+import ca.uqo.restoplex.domain.model.Order;
+import ca.uqo.restoplex.domain.model.OrderableDescription;
+import ca.uqo.restoplex.domain.model.Table;
 import ca.uqo.restoplex.domain.Factory;
 import ca.uqo.restoplex.domain.OrderController;
 import javafx.scene.Scene;
@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-public class ClassController implements Initializable{
+public class OrderSceneController implements Initializable{
 	private final static OrderController ORDER_CONTROLLER = Factory.getOrderControllerInstance();
 	
 	private static Order CURRENT_ORDER;
@@ -227,7 +227,7 @@ public class ClassController implements Initializable{
 	    }*/
 	    
 	    public static void switchToMenuCommande(ActionEvent event, Table selectedTable) throws IOException {
-			Parent root2 = FXMLLoader.load(Objects.requireNonNull(ClassController.class.getResource("MenuCommande.fxml")));
+			Parent root2 = FXMLLoader.load(Objects.requireNonNull(OrderSceneController.class.getResource("OrderScene.fxml")));
 			var stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 			var scene= new Scene(root2);
 			stage.setScene(scene);
@@ -238,7 +238,7 @@ public class ClassController implements Initializable{
 		}
 		
 		public static void switchToTable(ActionEvent event) throws IOException {
-			Parent root1 = FXMLLoader.load(Objects.requireNonNull(ClassController.class.getResource("Tablee.fxml")));
+			Parent root1 = FXMLLoader.load(Objects.requireNonNull(OrderSceneController.class.getResource("TablesScene.fxml")));
 			var stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 			var scene = new Scene(root1);
 			stage.setScene(scene);

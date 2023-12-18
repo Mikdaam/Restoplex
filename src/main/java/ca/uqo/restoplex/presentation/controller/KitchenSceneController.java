@@ -1,6 +1,6 @@
-package ca.uqo.restoplex.presentation;
-import ca.uqo.restoplex.data.Cookable;
-import ca.uqo.restoplex.data.OrderableDescription;
+package ca.uqo.restoplex.presentation.controller;
+import ca.uqo.restoplex.domain.model.Cookable;
+import ca.uqo.restoplex.domain.model.OrderableDescription;
 import ca.uqo.restoplex.domain.Factory;
 import ca.uqo.restoplex.domain.Kouizine;
 import javafx.application.Application;
@@ -14,7 +14,7 @@ import javafx.stage.Stage;
 
 import java.util.Random;
 
-public final class KouizineOverviewGUI extends Application {
+public final class KitchenSceneController extends Application {
   private final Kouizine kouizine = Factory.getKouizineInstance();
   private final ListView<Cookable> toCookListView = kouizine.bindListViewWithToCookCookables();
   private final ListView<Cookable> inPreparationListView = kouizine.bindListViewWithInPreparationCookables();

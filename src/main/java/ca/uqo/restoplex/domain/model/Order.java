@@ -1,4 +1,4 @@
-package ca.uqo.restoplex.data;
+package ca.uqo.restoplex.domain.model;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
