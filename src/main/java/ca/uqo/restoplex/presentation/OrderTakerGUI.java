@@ -56,7 +56,7 @@ public class OrderTakerGUI implements Initializable{
 		private Button backToTable;
 		
 		@FXML
-	    private Label nomTable;
+		private static Label tableLabel;
 
 	   // @Override
 	    public void initialize(URL location, ResourceBundle resources) {
@@ -81,12 +81,12 @@ public class OrderTakerGUI implements Initializable{
 	    	var cokeDesc = new OrderableDescription.OrderableDescriptionData(9L, "Coke", 6.59);
 	    	cokeDesc.reveal();
 	    	
-	    	var pizza = new OrderableDescription.ItemDescription(pizzaDesc, OrderableDescription.ITEM_CATEGORY.DISH, "TODO");
-	    	var burger = new OrderableDescription.ItemDescription(burgerDesc, OrderableDescription.ITEM_CATEGORY.DISH, "TODO");
-	    	var poutine = new OrderableDescription.ItemDescription(poutineDesc, OrderableDescription.ITEM_CATEGORY.STARTER, "TODO");
-	    	var miniBurger = new OrderableDescription.ItemDescription(miniBurgerDesc, OrderableDescription.ITEM_CATEGORY.DISH, "TODO");
-	    	var Tiramisu = new OrderableDescription.ItemDescription(tiramisuDesc, OrderableDescription.ITEM_CATEGORY.DESSERT, "TODO");
-	    	var Coke = new OrderableDescription.ItemDescription(cokeDesc, OrderableDescription.ITEM_CATEGORY.DRINK, "TODO");
+	    	var pizza = new OrderableDescription.ItemDescription(pizzaDesc, OrderableDescription.ITEM_CATEGORY.DISH, "sauce tomate, mozarrella, champignons");
+	    	var burger = new OrderableDescription.ItemDescription(burgerDesc, OrderableDescription.ITEM_CATEGORY.DISH, "pain burger, steak, concombre, tomates, fromage");
+	    	var poutine = new OrderableDescription.ItemDescription(poutineDesc, OrderableDescription.ITEM_CATEGORY.STARTER, "French fries, gravy, fromage poutine");
+	    	var miniBurger = new OrderableDescription.ItemDescription(miniBurgerDesc, OrderableDescription.ITEM_CATEGORY.DISH, "mini pain burger, mini steak, concombre, tomates, fromage");
+	    	var Tiramisu = new OrderableDescription.ItemDescription(tiramisuDesc, OrderableDescription.ITEM_CATEGORY.DESSERT, "mascarpone, caco, biscuit cuillère");
+	    	var Coke = new OrderableDescription.ItemDescription(cokeDesc, OrderableDescription.ITEM_CATEGORY.DRINK, "");
 	    	
 	    	var italianMeal = new OrderableDescription.MealDescription(italianDesc, List.of(pizza, Coke, Tiramisu));
 	    	var kidsMeal = new OrderableDescription.MealDescription(kidMealDesc, List.of(miniBurger, Coke, Tiramisu));
@@ -95,100 +95,100 @@ public class OrderTakerGUI implements Initializable{
 	    	
 	    	if (plat1Button != null) {
 	    		plat1Button.setOnAction(e -> {
-		    		onPlatButtonClick("Italien");
-		    		if(CURRENT_ORDER == null) {
-		    			return;
-		    		}
-		    		
-		    		CURRENT_ORDER.addNewOrderable(italianMeal, (short) 1);
+						if(CURRENT_ORDER == null) {
+							return;
+						}
+
+						var quantity = ORDER_CONTROLLER.addNewItemToOrder("Italien");
+		    		CURRENT_ORDER.addNewOrderable(italianMeal, quantity);
 		    	});
 	    	}
 	    	
 	        if (plat2Button != null) {
 	        	plat2Button.setOnAction(e -> {
-	        		onPlatButtonClick("Kid's Meal");
 	        		if(CURRENT_ORDER == null) {
-		    			return;
-		    		}
-		    		
-		    		CURRENT_ORDER.addNewOrderable(kidsMeal, (short) 1);
+								return;
+							}
+
+							var quantity = ORDER_CONTROLLER.addNewItemToOrder("Kid's Meal");
+							CURRENT_ORDER.addNewOrderable(kidsMeal, quantity);
 	        	});
 	        }
 	        
 	        if (plat3Button != null) {
 	        	plat3Button.setOnAction(e -> {
-	        		onPlatButtonClick("Familial Meal");
 	        		if(CURRENT_ORDER == null) {
-		    			return;
-		    		}
-		    		
-		    		CURRENT_ORDER.addNewOrderable(familialMeal, (short) 1);
+								return;
+							}
+
+							var quantity = ORDER_CONTROLLER.addNewItemToOrder("Familial Meal");
+							CURRENT_ORDER.addNewOrderable(familialMeal, quantity);
 	        	});
 	        }
 	        
 	        if (plat4Button != null) {
 	        	plat4Button.setOnAction(e -> {
-	        		onPlatButtonClick("Pizza");
 	        		if(CURRENT_ORDER == null) {
-		    			return;
-		    		}
-		    		
-		    		CURRENT_ORDER.addNewOrderable(pizza, (short) 1);
+								return;
+							}
+
+							var quantity = ORDER_CONTROLLER.addNewItemToOrder("Pizza");
+		    			CURRENT_ORDER.addNewOrderable(pizza, quantity);
 	        	});
 	        }
 	        
 	        if (plat5Button != null) {
 	        	plat5Button.setOnAction(e -> {
-	        		onPlatButtonClick("Burger");
 	        		if(CURRENT_ORDER == null) {
-		    			return;
-		    		}
-		    		
-		    		CURRENT_ORDER.addNewOrderable(burger, (short) 1);
+								return;
+							}
+
+							var quantity = ORDER_CONTROLLER.addNewItemToOrder("Burger");
+							CURRENT_ORDER.addNewOrderable(burger, quantity);
 	        	});
 	        }
 	        
 	        if (plat6Button != null) {
 	        	plat6Button.setOnAction(e -> {
-	        		onPlatButtonClick("Poutine");
 	        		if(CURRENT_ORDER == null) {
-		    			return;
-		    		}
-		    		
-		    		CURRENT_ORDER.addNewOrderable(poutine, (short) 1);
+								return;
+							}
+
+							var quantity = ORDER_CONTROLLER.addNewItemToOrder("Poutine");
+							CURRENT_ORDER.addNewOrderable(poutine, quantity);
 	        	});
 	        }
 	        
 	        if (plat7Button != null) {
 	        	plat7Button.setOnAction(e -> {
-	        		onPlatButtonClick("Mini-Burger");
 	        		if(CURRENT_ORDER == null) {
-		    			return;
-		    		}
-		    		
-		    		CURRENT_ORDER.addNewOrderable(miniBurger, (short) 1);
+								return;
+							}
+
+							var quantity = ORDER_CONTROLLER.addNewItemToOrder("Mini-Burger");
+							CURRENT_ORDER.addNewOrderable(miniBurger, quantity);
 	        	});
 	        }
 	        
 	        if (plat8Button != null) {
 	        	plat8Button.setOnAction(e -> {
-	        		onPlatButtonClick("Tiramisu");
 	        		if(CURRENT_ORDER == null) {
-		    			return;
-		    		}
-		    		
-		    		CURRENT_ORDER.addNewOrderable(Tiramisu, (short) 1);
+								return;
+							}
+
+							var quantity = ORDER_CONTROLLER.addNewItemToOrder("Tiramisu");
+							CURRENT_ORDER.addNewOrderable(Tiramisu, quantity);
 	        	});
 	        }
 	        
 	        if (plat9Button != null) {
 	        	plat9Button.setOnAction(e -> {
-	        		onPlatButtonClick("Coke");
 	        		if(CURRENT_ORDER == null) {
-		    			return;
-		    		}
-		    		
-		    		CURRENT_ORDER.addNewOrderable(Coke, (short) 1);
+								return;
+							}
+
+							var quantity = ORDER_CONTROLLER.addNewItemToOrder("Coke");
+							CURRENT_ORDER.addNewOrderable(Coke, quantity);
 	        	});
 	        }
 
@@ -212,19 +212,16 @@ public class OrderTakerGUI implements Initializable{
 	        }
 	   }
 	    
-	    public void onPlatButtonClick(String nomPlat) {
-	    	ORDER_CONTROLLER.getCurrentOrderItemsList().add(nomPlat);
-	    }
-	    
 	    public static void switchToMenuCommande(ActionEvent event, Table selectedTable) throws IOException {
 			Parent root2 = FXMLLoader.load(Objects.requireNonNull(OrderTakerGUI.class.getResource("MenuCommande.fxml")));
 			var stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 			var scene= new Scene(root2);
 			stage.setScene(scene);
-			
+
+			System.out.println(selectedTable);
 			CURRENT_ORDER = ORDER_CONTROLLER.createOrder(selectedTable);
 		    
-		    stage.show();
+			stage.show();
 		}
 		
 		public static void switchToTable(ActionEvent event) throws IOException {

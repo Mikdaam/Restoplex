@@ -61,15 +61,13 @@ public class TableOverviewGUI implements Initializable {
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		// TODO Auto-generated method stub
-		System.out.println(",,,,,,,");
 		var tableController = Factory.getTablesControllerInstance();
 		var tableList = tableController.tables();
 		
 		if(table1 != null) {
 			table1.setOnAction(event -> {
 				try {
-					OrderTakerGUI.switchToMenuCommande(event, tableList.get(0));
+					OrderTakerGUI.switchToMenuCommande(event, tableList.getFirst());
 				} catch (IOException e) {
 					System.err.println(e.getMessage());
 					System.exit(1);
