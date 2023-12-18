@@ -1,4 +1,4 @@
-package ca.uqo.restoplex.data.datasource;
+package ca.uqo.restoplex.data.datasource.entity;
 
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
@@ -8,17 +8,13 @@ public class Table {
 	@DatabaseField(generatedId = true)
 	private long tableId;
 
-	@DatabaseField()
+	@DatabaseField
 	private int capacity;
 
 	public Table() {}
 
 	public long getTableId() {
 		return tableId;
-	}
-
-	public void setTableId(long tableId) {
-		this.tableId = tableId;
 	}
 
 	public int getCapacity() {
