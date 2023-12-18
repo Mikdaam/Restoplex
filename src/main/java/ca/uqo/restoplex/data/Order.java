@@ -9,10 +9,10 @@ public final class Order {
   public final class OrderLine { // TODO remplacer par DTO OrderLine
     private enum ORDER_LINE_STATE {TO_COOK, IN_PREPARATION, TO_DELIVER, DELIVERED}
 
-    private final short quantity;
     private final OrderableDescription orderableDescription;
     private final HashSet<Cookable> associatedCookables = new HashSet<>();
 
+    private short quantity;
     private ORDER_LINE_STATE currentState = ORDER_LINE_STATE.TO_COOK;
 
     private OrderLine(short quantity, OrderableDescription orderableDescription) {
@@ -65,6 +65,24 @@ public final class Order {
     public Set<Cookable> associatedCookables() {
       return Set.copyOf(associatedCookables);
     }
+
+    @Override
+    public boolean equals(Object o) {
+      return o instanceof OrderLine orderLine
+              && orderLine.quantity == quantity
+              && orderLine.orderableDescription.equals(orderableDescription)
+              && orderLine.currentState.equals(currentState);
+    }
+
+    @Override
+    public int hashCode() {
+      return quantity ^ Objects.hashCode(orderableDescription) ^ Objects.hashCode(currentState);
+    }
+
+    @Override
+    public String toString() {
+      return orderableDescription.data().toString() + "\t|\tx" + quantity;
+    }
   }
 
   private static final short MAX_QUANTITY = 30;
@@ -79,9 +97,17 @@ public final class Order {
   public void addNewOrderable(OrderableDescription description, short quantity) {
     Objects.requireNonNull(description);
     Objects.checkIndex(quantity, MAX_QUANTITY);
-    var orderLine = new OrderLine(quantity, description);
-    toCookContent.add(orderLine);
-    orderContent.add(orderLine);
+
+    if(quantity > 1) {
+      var oldOrderLine = new OrderLine((short) (quantity - 1), description);
+      toCookContent.remove(oldOrderLine);
+      orderContent.remove(oldOrderLine);
+    }
+
+
+    var newOrderLine = new OrderLine(quantity, description);
+    toCookContent.add(newOrderLine);
+    orderContent.add(newOrderLine);
   }
 
   public List<OrderLine> orderLinesToCook() {

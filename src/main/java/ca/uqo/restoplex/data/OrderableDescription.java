@@ -1,6 +1,7 @@
 package ca.uqo.restoplex.data;
 
 import java.util.List;
+import java.util.Objects;
 
 public sealed interface OrderableDescription {
   final class OrderableDescriptionData { // TODO A REMPLACER PAR LE DTO OrderableDescriptionData
@@ -21,6 +22,15 @@ public sealed interface OrderableDescription {
     
     public void reveal() {
       available = true;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+      return o instanceof OrderableDescriptionData data
+              && data.id == id
+              && data.name.equals(name)
+              && data.price == price
+              && data.available == available;
     }
 
     @Override
