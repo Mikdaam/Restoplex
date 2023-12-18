@@ -10,18 +10,19 @@ import javafx.collections.ObservableList;
 
 public final class OrderController {
 	private final Kouizine kouizine = Factory.getKouizineInstance();
-	private final ObservableList<String> platList = FXCollections.observableArrayList();
+	private final ObservableList<String> currentOrderItemsList = FXCollections.observableArrayList();
 	private final HashMap<Table, Set<Order>> orders = new HashMap<>();
 
 	OrderController() {}
-	
-    public ObservableList<String> getPlatList() {
-        return platList;
+
+		// Juste horrible : a ne jamais faire !!!
+    public ObservableList<String> getCurrentOrderItemsList() {
+        return currentOrderItemsList;
     }
     
    public Order createOrder(Table associatedTable){
 	   var order = new Order(associatedTable);
-	   orders.merge(associatedTable, new HashSet<Order>(), (oldSet, __) -> {
+	   orders.merge(associatedTable, new HashSet<>(), (oldSet, __) -> {
 		   oldSet.add(order);
 		   return oldSet;
 	   });
@@ -31,5 +32,6 @@ public final class OrderController {
    
    public void submitTokouizine(Order orderToSubmit) {
 	   kouizine.submitNewOrder(orderToSubmit);
+		 currentOrderItemsList.clear();
    }
 }

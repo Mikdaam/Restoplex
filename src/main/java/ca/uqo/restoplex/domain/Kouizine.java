@@ -34,23 +34,17 @@ public final class Kouizine {
   void submitNewOrder(Order order) {
     Objects.requireNonNull(order);
     order.orderLinesToCook().forEach(this::associateOrderLineWithNewCookables);
-    System.out.println("Kouizine :");
-    System.out.println(toCook);
-  }
-
-  public void test(Cookable cookable) { // TODO A VIRER
-    toCook.add(cookable);
   }
 
   public void prepareCookable(Cookable cookable) {
     toCook.remove(cookable);
-//    cookable.associatedOrderLine().markInPreparation(); // TODO A REMETTRE
+    cookable.associatedOrderLine().markInPreparation();
     inPreparation.add(cookable);
   }
 
   public void notifyReadyCookable(Cookable cookable) {
     inPreparation.remove(cookable);
-//    cookable.associatedOrderLine().markReady(); // TODO A REMETTRE
+    cookable.associatedOrderLine().markReady();
     // TODO send Ready notif
   }
 
