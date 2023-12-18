@@ -36,7 +36,7 @@ public final class TablesController {
     return List.copyOf(tables.values());
   }
 
-  //Cr�ation des tables
+  //Création des tables
   public void createTables() {
     List<Table> tableList = List.of(
         new Table(1L, (short)8),

@@ -14,7 +14,7 @@ import javafx.collections.ObservableSet;
 public final class OrderController {
 	private final Kouizine kouizine = Factory.getKouizineInstance();
 	private final ObservableList<String> currentOrderItemsList = FXCollections.observableArrayList();
-	private final HashMap<String, Short> currentOrderItemsQuantities = new HashMap<>();
+	private final HashMap<String, Short> currentOrderItemsQuantities = new HashMap<>(); // refactor !!
 	private final HashMap<Table, Set<Order>> orders = new HashMap<>();
 
 	public OrderController() {}
