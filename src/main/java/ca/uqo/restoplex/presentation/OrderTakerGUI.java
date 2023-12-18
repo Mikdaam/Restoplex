@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-public class ClassController implements Initializable{
+public class OrderTakerGUI implements Initializable{
 	private final static OrderController ORDER_CONTROLLER = Factory.getOrderControllerInstance();
 	
 	private static Order CURRENT_ORDER;
@@ -193,7 +193,7 @@ public class ClassController implements Initializable{
 	        }
 
 	        // Configurer le mod�le pour la ListView
-	        if (myListView != null) myListView.setItems(ORDER_CONTROLLER.getPlatList());
+	        if (myListView != null) myListView.setItems(ORDER_CONTROLLER.getCurrentOrderItemsList());
 	        
 	        if(done != null) {
 	        	done.setOnAction(e -> ORDER_CONTROLLER.submitTokouizine(CURRENT_ORDER));
@@ -213,11 +213,11 @@ public class ClassController implements Initializable{
 	   }
 	    
 	    public void onPlatButtonClick(String nomPlat) {
-	    	ORDER_CONTROLLER.getPlatList().add(nomPlat);
+	    	ORDER_CONTROLLER.getCurrentOrderItemsList().add(nomPlat);
 	    }
 	    
 	    public static void switchToMenuCommande(ActionEvent event, Table selectedTable) throws IOException {
-			Parent root2 = FXMLLoader.load(Objects.requireNonNull(ClassController.class.getResource("MenuCommande.fxml")));
+			Parent root2 = FXMLLoader.load(Objects.requireNonNull(OrderTakerGUI.class.getResource("MenuCommande.fxml")));
 			var stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 			var scene= new Scene(root2);
 			stage.setScene(scene);
@@ -228,7 +228,7 @@ public class ClassController implements Initializable{
 		}
 		
 		public static void switchToTable(ActionEvent event) throws IOException {
-			Parent root1 = FXMLLoader.load(Objects.requireNonNull(ClassController.class.getResource("Tablee.fxml")));
+			Parent root1 = FXMLLoader.load(Objects.requireNonNull(OrderTakerGUI.class.getResource("Tablee.fxml")));
 			var stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 			var scene = new Scene(root1);
 			stage.setScene(scene);

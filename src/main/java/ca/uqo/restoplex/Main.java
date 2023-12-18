@@ -18,10 +18,6 @@ import static java.lang.System.exit;
 public class Main extends Application {
   @Override
   public void start(Stage stage) {
-//    new RestoPlex().start(stage);
-//    new LoginPageGUI().start(stage);
-
-
     var tablesBtn = new Button("Voir les tables");
     tablesBtn.setOnAction(event -> {
       var secondStage = new Stage();
