@@ -11,12 +11,14 @@ public class LoginPageGUI extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			//Parent root = FXMLLoader.load(getClass().getResource("Presantation.fxml"));
-			Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("LoginPage.fxml")));
+			Parent root = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
+			//Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("LoginPage.fxml")));
 			//Scene scene = new Scene(root);
 			Scene scene = new Scene(root, 600,400);
 
-			scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("application.css")).toExternalForm());
+			//scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("application.css")).toExternalForm());
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {

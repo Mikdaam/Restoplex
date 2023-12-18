@@ -87,4 +87,9 @@ public final class Order {
   public List<OrderLine> orderLinesToCook() {
     return List.copyOf(toCookContent);
   }
+
+	public Table getTable() {
+		// TODO Auto-generated method stub
+		return table;
+	}
 }

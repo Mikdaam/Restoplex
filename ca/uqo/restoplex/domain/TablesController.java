@@ -9,15 +9,34 @@ public final class TablesController {
   TablesController() {
 	  createTables();
   }
+  
+  // J'ai rajouté ce bout de code pour l'état des table
+  private boolean highlighted = false;
+  public boolean isHighlighted() {
+      return highlighted;
+  }
 
+  public void setHighlighted(boolean highlighted) {
+      this.highlighted = highlighted;
+  }
+
+  //J'ai mis à jour cette méthode 
   private void updateTableState(long tableId, Table.TABLE_STATE newState) {
-    if(tableId <= 0) {
-      throw new IllegalArgumentException();
-    }
+		    if (tableId <= 0) {
+		        throw new IllegalArgumentException();
+		    }
+
+		    /*tables.computeIfPresent(tableId, (__, oldTable) -> {
+		        Table newTable = new Table(tableId, oldTable.capacity(), newState);
+		        if (newState == Table.TABLE_STATE.ORDERING) {
+		            newTable.setHighlighted(true);  // Met à jour la propriété visuelle
+		        }
+		        return newTable;
+		    });
 
     tables.computeIfPresent(tableId,
             (__, oldTable) -> new Table(tableId, oldTable.capacity(), newState) // TODO update table state dans DB ?????
-    );
+    );*/
   }
 
   void takeOrderForTable(long tableId) {
@@ -36,7 +55,7 @@ public final class TablesController {
     return List.copyOf(tables.values());
   }
   
-  //Crï¿½ation des tables
+  //Création des tables
   public void createTables() {
     Table table1 = new Table(1L, (short)8);
     Table table2 = new Table(2L, (short)14);
@@ -67,30 +86,30 @@ public final class TablesController {
     
     
 
-    // Ajouter les tables ï¿½ la collection
+    // Ajouter les tables à la liste
     tables.put(table1.id(), table1);
     tables.put(table2.id(), table2);
     tables.put(table3.id(), table3);
-    tables.put(table4.id(), table1);
-    tables.put(table5.id(), table2);
-    tables.put(table6.id(), table3);
-    tables.put(table7.id(), table1);
-    tables.put(table8.id(), table2);
-    tables.put(table9.id(), table3);
-    tables.put(table10.id(), table1);
-    tables.put(table11.id(), table2);
-    tables.put(table12.id(), table3);
-    tables.put(table13.id(), table1);
-    tables.put(table14.id(), table2);
-    tables.put(table15.id(), table3);
-    tables.put(table16.id(), table1);
-    tables.put(table17.id(), table2);
-    tables.put(table18.id(), table3);
-    tables.put(table19.id(), table1);
-    tables.put(table20.id(), table2);
-    tables.put(table21.id(), table3);
-    tables.put(table22.id(), table1);
-    tables.put(table23.id(), table2);
-    tables.put(table24.id(), table3);
+    tables.put(table4.id(), table4);
+    tables.put(table5.id(), table5);
+    tables.put(table6.id(), table6);
+    tables.put(table7.id(), table7);
+    tables.put(table8.id(), table8);
+    tables.put(table9.id(), table9);
+    tables.put(table10.id(), table10);
+    tables.put(table11.id(), table11);
+    tables.put(table12.id(), table12);
+    tables.put(table13.id(), table13);
+    tables.put(table14.id(), table14);
+    tables.put(table15.id(), table15);
+    tables.put(table16.id(), table16);
+    tables.put(table17.id(), table17);
+    tables.put(table18.id(), table18);
+    tables.put(table19.id(), table19);
+    tables.put(table20.id(), table20);
+    tables.put(table21.id(), table21);
+    tables.put(table22.id(), table22);
+    tables.put(table23.id(), table23);
+    tables.put(table24.id(), table24);
   }
 }

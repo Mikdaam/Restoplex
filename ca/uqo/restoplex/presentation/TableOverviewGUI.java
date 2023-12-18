@@ -69,9 +69,9 @@ public class TableOverviewGUI implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
-		System.out.println(",,,,,,,");
 		var tableController = Factory.getTablesControllerInstance();
 		var tableList = tableController.tables();
+		System.out.println(tableList);
 		
 		if(table1 != null) {
 			table1.setOnAction(event -> {

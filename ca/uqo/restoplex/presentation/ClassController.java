@@ -57,8 +57,11 @@ public class ClassController implements Initializable{
 		
 		@FXML
 	    private Label nomTable;
+		@FXML
+	    private Label nomCommande;
+		private static Table selectedTable;
 
-	   // @Override
+	   @Override
 	    public void initialize(URL location, ResourceBundle resources) {
 	        // Configurer les gestionnaires d'ï¿½vï¿½nements pour chaque bouton
 	    	
@@ -91,7 +94,6 @@ public class ClassController implements Initializable{
 	    	var italianMeal = new OrderableDescription.MealDescription(italianDesc, List.of(pizza, Coke, Tiramisu));
 	    	var kidsMeal = new OrderableDescription.MealDescription(kidMealDesc, List.of(miniBurger, Coke, Tiramisu));
 	    	var familialMeal = new OrderableDescription.MealDescription(familialMealDesc, List.of(poutine, Coke, Tiramisu));
-
 	    	
 	    	if (plat1Button != null) {
 	    		plat1Button.setOnAction(e -> {
@@ -192,11 +194,13 @@ public class ClassController implements Initializable{
 	        	});
 	        }
 
-	        // Configurer le modï¿½le pour la ListView
 	        if (myListView != null) myListView.setItems(ORDER_CONTROLLER.getPlatList());
 	        
 	        if(done != null) {
-	        	done.setOnAction(e -> ORDER_CONTROLLER.submitTokouizine(CURRENT_ORDER));
+	        	done.setOnAction(e -> {
+	                ORDER_CONTROLLER.submitTokouizine(CURRENT_ORDER);
+	                ORDER_CONTROLLER.getPlatList().clear();
+	            });
 	        }
 	        
 	        if(backToTable != null) {
@@ -210,20 +214,25 @@ public class ClassController implements Initializable{
 					}
 				});
 	        }
+	        
+	        if(nomTable !=null && CURRENT_ORDER !=null) {
+	        	var table= CURRENT_ORDER.getTable();
+	        	nomTable.setText("Table #"+ table.id());
+	        }
 	   }
 	    
 	    public void onPlatButtonClick(String nomPlat) {
 	    	ORDER_CONTROLLER.getPlatList().add(nomPlat);
 	    }
 	    
+	    //à revoir avec Axel
 	    public static void switchToMenuCommande(ActionEvent event, Table selectedTable) throws IOException {
 			Parent root2 = FXMLLoader.load(Objects.requireNonNull(ClassController.class.getResource("MenuCommande.fxml")));
 			var stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 			var scene= new Scene(root2);
 			stage.setScene(scene);
-			
-			CURRENT_ORDER = ORDER_CONTROLLER.createOrder(selectedTable);
 		    
+			CURRENT_ORDER = ORDER_CONTROLLER.createOrder(selectedTable);
 		    stage.show();
 		}
 		
@@ -234,4 +243,14 @@ public class ClassController implements Initializable{
 			stage.setScene(scene);
 			stage.show();
 		}
+		
+		@FXML
+	    private void goToHomePage(ActionEvent event) throws IOException {
+			//demander à Axel l'interface qu'il a créé pour home et changer le nom de la localisation
+	        Parent root = FXMLLoader.load(Objects.requireNonNull(ClassController.class.getResource("VotrePageAccueil.fxml")));
+	        Scene scene = new Scene(root);
+	        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+	        stage.setScene(scene);
+	        stage.show();
+	    }
 }
