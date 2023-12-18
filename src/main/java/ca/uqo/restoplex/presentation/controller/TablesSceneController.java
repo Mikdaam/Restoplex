@@ -1,5 +1,5 @@
 package ca.uqo.restoplex.presentation.controller;
-import ca.uqo.restoplex.domain.Factory;
+import ca.uqo.restoplex.utils.Factory;
 import javafx.scene.control.Button;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;

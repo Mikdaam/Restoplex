@@ -3,7 +3,7 @@ import javafx.stage.Stage;
 import ca.uqo.restoplex.domain.model.Order;
 import ca.uqo.restoplex.domain.model.OrderableDescription;
 import ca.uqo.restoplex.domain.model.Table;
-import ca.uqo.restoplex.domain.Factory;
+import ca.uqo.restoplex.utils.Factory;
 import ca.uqo.restoplex.domain.OrderController;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -192,16 +192,15 @@ public class OrderSceneController implements Initializable{
 	        	});
 	        }
 
-	        // Configurer le mod�le pour la ListView
-	        if (myListView != null) myListView.setItems(ORDER_CONTROLLER.getPlatList());
-	        
-	        if(done != null) {
-	        	System.out.println("ICICICICI");
-	        	done.setOnAction(e -> ORDER_CONTROLLER.submitTokouizine(CURRENT_ORDER));
-	        }
-	        
-	        if(backToTable != null) {
-	        	backToTable.setOnAction(event -> {
+			// Configurer le mod�le pour la ListView
+			if (myListView != null) myListView.setItems(ORDER_CONTROLLER.getCurrentOrderItemsList());
+
+			if(done != null) {
+				done.setOnAction(e -> ORDER_CONTROLLER.submitTokouizine(CURRENT_ORDER));
+			}
+
+			if(backToTable != null) {
+				backToTable.setOnAction(event -> {
 					try {
 						switchToTable(event);
 					} catch (IOException e) {
@@ -210,38 +209,29 @@ public class OrderSceneController implements Initializable{
 						return;
 					}
 				});
-	        }
+			}
 	   }
-	    
-	    public void onPlatButtonClick(String nomPlat) {
-	    	ORDER_CONTROLLER.getPlatList().add(nomPlat);
-	    }
-	    
-	    /* public void nomTableDeLaCommandeEnCours() {
-	    	System.out.println("Updating label with: " + selectedTableName);
-	       if (nomTable != null) {
-	        	nomTable.setText(selectedTableName);
-	        	nomTable.requestLayout();
-	        }
-	    	
-	    }*/
-	    
-	    public static void switchToMenuCommande(ActionEvent event, Table selectedTable) throws IOException {
-			Parent root2 = FXMLLoader.load(Objects.requireNonNull(OrderSceneController.class.getResource("OrderScene.fxml")));
-			var stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-			var scene= new Scene(root2);
-			stage.setScene(scene);
-			
-			CURRENT_ORDER = ORDER_CONTROLLER.createOrder(selectedTable);
-		    
-		    stage.show();
-		}
+
+	public void onPlatButtonClick(String nomPlat) {
+		ORDER_CONTROLLER.getCurrentOrderItemsList().add(nomPlat);
+	}
+
+	public static void switchToMenuCommande(ActionEvent event, Table selectedTable) throws IOException {
+		Parent root2 = FXMLLoader.load(Objects.requireNonNull(OrderSceneController.class.getResource("/ca/uqo/restoplex/presentation/OrderScene.fxml")));
+		var stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+		var scene= new Scene(root2);
+		stage.setScene(scene);
+
+		CURRENT_ORDER = ORDER_CONTROLLER.createOrder(selectedTable);
+
+		stage.show();
+	}
 		
-		public static void switchToTable(ActionEvent event) throws IOException {
-			Parent root1 = FXMLLoader.load(Objects.requireNonNull(OrderSceneController.class.getResource("TablesScene.fxml")));
-			var stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-			var scene = new Scene(root1);
-			stage.setScene(scene);
-			stage.show();
-		}
+	public static void switchToTable(ActionEvent event) throws IOException {
+		Parent root1 = FXMLLoader.load(Objects.requireNonNull(OrderSceneController.class.getResource("/ca/uqo/restoplex/presentation/TablesScene.fxml")));
+		var stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+		var scene = new Scene(root1);
+		stage.setScene(scene);
+		stage.show();
+	}
 }

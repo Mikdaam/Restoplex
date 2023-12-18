@@ -12,7 +12,7 @@ public final class Kouizine {
   private final ObservableList<Cookable> toCook = FXCollections.observableArrayList();
   private final ObservableList<Cookable> inPreparation = FXCollections.observableArrayList();
 
-  Kouizine() {}
+  public Kouizine() {}
 
   private void associateOrderLineWithNewCookables(Order.OrderLine orderLine) {
     var description = orderLine.orderableDescription();

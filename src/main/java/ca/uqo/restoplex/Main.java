@@ -26,7 +26,7 @@ public class Main extends Application {
       Parent root1;
 
       try {
-        root1 = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/ca/uqo/restoplex/presentation/Tablee.fxml")));
+        root1 = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/ca/uqo/restoplex/presentation/TablesScene.fxml")));
       } catch(IOException e) {
         System.err.println(e.getMessage());
         exit(1);
@@ -39,7 +39,7 @@ public class Main extends Application {
       Parent root2;
 
       try {
-        root2 = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/ca/uqo/restoplex/presentation/MenuCommande.fxml")));
+        root2 = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/ca/uqo/restoplex/presentation/OrderScene.fxml")));
       } catch(IOException e) {
         System.err.println(e.getMessage());
         exit(1);

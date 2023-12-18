@@ -1,6 +1,6 @@
 package ca.uqo.restoplex.presentation;
 import ca.uqo.restoplex.domain.model.Cookable;
-import ca.uqo.restoplex.domain.Factory;
+import ca.uqo.restoplex.utils.Factory;
 import ca.uqo.restoplex.domain.Kouizine;
 import javafx.application.Application;
 import javafx.geometry.Pos;

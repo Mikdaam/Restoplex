@@ -5,6 +5,8 @@ import ca.uqo.restoplex.domain.model.Table;
 import ca.uqo.restoplex.domain.model.Order;
 
 import java.util.Set;
+
+import ca.uqo.restoplex.utils.Factory;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -13,7 +15,7 @@ public final class OrderController {
 	private final ObservableList<String> currentOrderItemsList = FXCollections.observableArrayList();
 	private final HashMap<Table, Set<Order>> orders = new HashMap<>();
 
-	OrderController() {}
+	public OrderController() {}
 
 		// Juste horrible : a ne jamais faire !!!
     public ObservableList<String> getCurrentOrderItemsList() {

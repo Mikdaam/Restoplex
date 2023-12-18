@@ -6,7 +6,7 @@ import java.util.List;
 public final class TablesController {
   private final HashMap<Long, Table> tables = new HashMap<>(); // TODO init avec toutes les tables de la BD
 
-  TablesController() {
+  public TablesController() {
 	  createTables();
   }
 
