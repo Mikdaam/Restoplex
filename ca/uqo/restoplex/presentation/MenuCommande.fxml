@@ -5,8 +5,6 @@
 <?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
@@ -205,14 +203,6 @@
                   <Font name="System Italic" size="22.0" />
                </font>
             </Label>
-            <ImageView fx:id="payer" fitHeight="94.0" fitWidth="123.0" layoutX="523.0" layoutY="506.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@Payer%20Logo.jpg" />
-               </image>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </ImageView>
          </children>
       </AnchorPane>
    </center>
