@@ -60,8 +60,10 @@
         <configuration>
           <source>21</source>
           <target>21</target>
+          <compilerArgs>--enable-preview</compilerArgs>
         </configuration>
       </plugin>
+
       <plugin>
         <groupId>org.openjfx</groupId>
         <artifactId>javafx-maven-plugin</artifactId>
@@ -96,7 +98,7 @@
               <finalName>Restoplex</finalName>
               <transformers>
                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                  <mainClass>ca.uqo.restoplex.Main</mainClass>
+                  <mainClass>ca.uqo.restoplex.EntryPoint</mainClass>
                 </transformer>
               </transformers>
               <filters>
