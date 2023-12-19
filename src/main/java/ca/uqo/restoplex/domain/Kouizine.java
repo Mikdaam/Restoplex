@@ -1,18 +1,19 @@
-package src.main.java.ca.uqo.restoplex.domain;
-import src.main.java.ca.uqo.restoplex.data.Cookable;
-import src.main.java.ca.uqo.restoplex.data.Order;
-import src.main.java.ca.uqo.restoplex.data.OrderableDescription;
+package ca.uqo.restoplex.domain;
+import ca.uqo.restoplex.domain.model.Cookable;
+import ca.uqo.restoplex.domain.model.Order;
+import ca.uqo.restoplex.domain.model.OrderableDescription;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.ListView;
-import java.util.Arrays;
+
+import java.util.List;
 import java.util.Objects;
 
 public final class Kouizine {
   private final ObservableList<Cookable> toCook = FXCollections.observableArrayList();
   private final ObservableList<Cookable> inPreparation = FXCollections.observableArrayList();
 
-  Kouizine() {}
+  public Kouizine() {}
 
   private void associateOrderLineWithNewCookables(Order.OrderLine orderLine) {
     var description = orderLine.orderableDescription();
@@ -22,7 +23,7 @@ public final class Kouizine {
         orderLine.associateWithCookable(cookable);
         toCook.add(cookable);
       }
-      case OrderableDescription.MealDescription mealDescription -> Arrays.stream(mealDescription.items())
+      case OrderableDescription.MealDescription mealDescription -> mealDescription.items().stream()
               .map(itemDescription -> new Cookable(orderLine.quantity(), itemDescription, orderLine))
               .forEach(cookable -> {
                 orderLine.associateWithCookable(cookable);
@@ -34,30 +35,24 @@ public final class Kouizine {
   void submitNewOrder(Order order) {
     Objects.requireNonNull(order);
     order.orderLinesToCook().forEach(this::associateOrderLineWithNewCookables);
-    System.out.println("Kouizine :");
-    System.out.println(toCook);
-  }
-
-  public void test(Cookable cookable) { // TODO A VIRER
-    toCook.add(cookable);
   }
 
   public void prepareCookable(Cookable cookable) {
     toCook.remove(cookable);
-//    cookable.associatedOrderLine().markInPreparation(); // TODO A REMETTRE
+    cookable.associatedOrderLine().markInPreparation();
     inPreparation.add(cookable);
   }
 
   public void notifyReadyCookable(Cookable cookable) {
     inPreparation.remove(cookable);
-//    cookable.associatedOrderLine().markReady(); // TODO A REMETTRE
+    cookable.associatedOrderLine().markReady();
     // TODO send Ready notif
   }
 
-  public ListView<Cookable> bindListViewWithToCookCookables() {
-    return new ListView<>(toCook);
+  public void bindListViewWithToCookCookables(ListView<Cookable> listView) {
+    listView.setItems(toCook);
   }
-  public ListView<Cookable> bindListViewWithInPreparationCookables() {
-    return new ListView<>(inPreparation);
+  public void bindListViewWithInPreparationCookables(ListView<Cookable> listView) {
+    listView.setItems(inPreparation);
   }
 }

@@ -1,4 +1,4 @@
-package src.main.java.ca.uqo.restoplex.data;
+package ca.uqo.restoplex.domain.model;
 
 sealed interface Notification {
   Cookable dish();

@@ -1,7 +1,11 @@
-package src.main.java.ca.uqo.restoplex.domain;
+package ca.uqo.restoplex.utils;
+
+import ca.uqo.restoplex.domain.Kouizine;
+import ca.uqo.restoplex.domain.OrderController;
+import ca.uqo.restoplex.domain.TablesController;
 
 public final class Factory {
-  private static class LazyHolder {
+  private static class LazyHolder { // TODO : Make a singleton class for each controller
     private static final TablesController TABLES_CONTROLLER_INSTANCE = new TablesController();
     private static final Kouizine KOUIZINE_INSTANCE = new Kouizine();
     private static final OrderController ORDER_CONTROLLER_INSTANCE = new OrderController();

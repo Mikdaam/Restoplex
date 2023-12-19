@@ -38,6 +38,17 @@
       <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
+
+    <dependency>
+      <groupId>com.j256.ormlite</groupId>
+      <artifactId>ormlite-jdbc</artifactId>
+      <version>6.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.xerial</groupId>
+      <artifactId>sqlite-jdbc</artifactId>
+      <version>3.42.0.0</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -49,8 +60,10 @@
         <configuration>
           <source>21</source>
           <target>21</target>
+          <compilerArgs>--enable-preview</compilerArgs>
         </configuration>
       </plugin>
+
       <plugin>
         <groupId>org.openjfx</groupId>
         <artifactId>javafx-maven-plugin</artifactId>
@@ -67,6 +80,36 @@
               <noManPages>true</noManPages>
               <stripDebug>true</stripDebug>
               <noHeaderFiles>true</noHeaderFiles>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>3.4.1</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <finalName>Restoplex</finalName>
+              <transformers>
+                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                  <mainClass>ca.uqo.restoplex.EntryPoint</mainClass>
+                </transformer>
+              </transformers>
+              <filters>
+                <filter>
+                  <artifact>*:*</artifact>
+                  <excludes>
+                    <exclude>**/module-info.class</exclude>
+                    <exclude>META-INF/MANIFEST.MF</exclude>
+                  </excludes>
+                </filter>
+              </filters>
             </configuration>
           </execution>
         </executions>
