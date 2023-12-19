@@ -213,7 +213,7 @@ public class OrderSceneController implements Initializable{
 	}
 
 	public static void switchToMenuCommande(ActionEvent event, Table selectedTable) throws IOException {
-		Parent root2 = FXMLLoader.load(Objects.requireNonNull(OrderSceneController.class.getResource("/ca/uqo/restoplex/presentation/OrderScene.fxml")));
+		Parent root2 = FXMLLoader.load(Objects.requireNonNull(OrderSceneController.class.getResource("/ca/uqo/restoplex/presentation/scenes/OrderPage.fxml")));
 		var stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		var scene= new Scene(root2);
 		stage.setScene(scene);
@@ -224,7 +224,7 @@ public class OrderSceneController implements Initializable{
 	}
 		
 	public static void switchToTable(ActionEvent event) throws IOException {
-		Parent root1 = FXMLLoader.load(Objects.requireNonNull(OrderSceneController.class.getResource("/ca/uqo/restoplex/presentation/TablesScene.fxml")));
+		Parent root1 = FXMLLoader.load(Objects.requireNonNull(OrderSceneController.class.getResource("/ca/uqo/restoplex/presentation/scenes/TablesPage.fxml")));
 		var stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		var scene = new Scene(root1);
 		stage.setScene(scene);

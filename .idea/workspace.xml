@@ -5,22 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7ceee46-6fad-4b84-a58c-29341b130619" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/uqo/restoplex/data/dao/TableDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/uqo/restoplex/data/datasource/Table.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ca/uqo/restoplex/presentation/controller/HomePageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ca/uqo/restoplex/presentation/controller/KitchenPageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/uqo/restoplex/data/Cookable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/uqo/restoplex/domain/model/Cookable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/uqo/restoplex/data/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/uqo/restoplex/domain/model/Notification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/uqo/restoplex/data/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/uqo/restoplex/domain/model/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/uqo/restoplex/data/OrderableDescription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/uqo/restoplex/domain/model/OrderableDescription.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/uqo/restoplex/data/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/uqo/restoplex/domain/model/Table.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restoplex.db" beforeDir="false" afterPath="$PROJECT_DIR$/restoplex.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/uqo/restoplex/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/uqo/restoplex/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ca/uqo/restoplex/domain/Kouizine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/uqo/restoplex/domain/Kouizine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/uqo/restoplex/domain/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/uqo/restoplex/domain/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/uqo/restoplex/domain/TablesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/uqo/restoplex/domain/TablesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/uqo/restoplex/presentation/ClassController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/uqo/restoplex/presentation/ClassController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/uqo/restoplex/presentation/KouizineOverviewGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/uqo/restoplex/presentation/KouizineOverviewGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/uqo/restoplex/presentation/KitchenView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/uqo/restoplex/presentation/LoginPageGUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/uqo/restoplex/presentation/RestoplexApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/uqo/restoplex/presentation/RestoplexApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/uqo/restoplex/presentation/controller/OrderSceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/uqo/restoplex/presentation/controller/OrderSceneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/uqo/restoplex/utils/DatabaseSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/uqo/restoplex/utils/DatabaseSetup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ca/uqo/restoplex/imageMenuProjet.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ca/uqo/restoplex/presentation/LoginPage.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ca/uqo/restoplex/presentation/OrderScene.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ca/uqo/restoplex/presentation/TablesScene.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ca/uqo/restoplex/presentation/application.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ca/uqo/restoplex/presentation/imageLoginPage1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ca/uqo/restoplex/presentation/loginPage/application.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +32,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>

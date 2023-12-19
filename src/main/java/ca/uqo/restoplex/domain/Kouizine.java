@@ -6,6 +6,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.ListView;
 
+import java.util.List;
 import java.util.Objects;
 
 public final class Kouizine {
@@ -48,10 +49,10 @@ public final class Kouizine {
     // TODO send Ready notif
   }
 
-  public ListView<Cookable> bindListViewWithToCookCookables() {
-    return new ListView<>(toCook);
+  public void bindListViewWithToCookCookables(ListView<Cookable> listView) {
+    listView.setItems(toCook);
   }
-  public ListView<Cookable> bindListViewWithInPreparationCookables() {
-    return new ListView<>(inPreparation);
+  public void bindListViewWithInPreparationCookables(ListView<Cookable> listView) {
+    listView.setItems(inPreparation);
   }
 }

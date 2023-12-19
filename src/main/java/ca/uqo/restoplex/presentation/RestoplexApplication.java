@@ -15,9 +15,9 @@ public class RestoplexApplication extends Application {
 	public void start(Stage primaryStage) {
 		
 		try {
-			Parent root1 = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("TablesScene.fxml")));
+			Parent root1 = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("TablesPage.fxml")));
 			Scene scene1 = new Scene(root1);
-			Parent root2 = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("OrderScene.fxml")));
+			Parent root2 = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("OrderPage.fxml")));
 			Scene scene2 = new Scene(root2);
 
 			scene2.getStylesheets().add(Objects.requireNonNull(getClass().getResource("application.css")).toExternalForm());

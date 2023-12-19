@@ -21,7 +21,7 @@ public class DatabaseSetup {
         createTables(connectionSource);
 
         // Insert generated data
-        insertGeneratedData(connectionSource);
+        // insertGeneratedData(connectionSource);
     }
 
     private static void createTables(ConnectionSource connectionSource) throws SQLException {
